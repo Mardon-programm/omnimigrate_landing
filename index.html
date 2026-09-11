@@ -378,7 +378,7 @@ created = datetime.now(timezone.utc)</span></code></pre>
     <!-- hardcoded secret -->
     <div class="ex reveal"><span class="hud tl"></span><span class="hud tr"></span><span class="hud bl"></span><span class="hud br"></span>
       <div class="ex-head"><span class="ex-title" data-i18n="ex3.t">Хардкод-секрет в коде</span>
-        <div class="ex-tags"><span class="ex-tag" data-i18n="ex3.tag0">security</span> <span class="ex-tag">N+1</span></div>
+        <div class="ex-tags"><span class="ex-tag" data-i18n="ex3.tag0">security</span> <span class="ex-tag" data-i18n="ex3.tag1">hardcode</span></div>
       </div>
       <div class="ex-cols">
         <div class="ex-col"><div class="ex-col-label bad" data-i18n="ex.before">До</div>
@@ -487,7 +487,7 @@ var I18N = {
     "ex.kick":"На конкретных примерах","ex.h":"Что именно меняет движок","ex.sub":"Три типичных случая: от удалённого API до небезопасной практики. Слева — что вы присылаете, справа — что получаете на выходе после проверки в песочнице.",
     "ex1.t":"Python 2 → Python 3.12","ex1.tag":"automated","ex1.note":"urlparse и urllib2 удалены из Python 3 — код просто не запустился бы без этой миграции.",
     "ex2.t":"Устаревший datetime.utcnow","ex2.tag":"deprecation","ex2.note":"datetime.utcnow объявлен устаревшим — новый вариант корректно хранит временную зону, что критично для аудита и времени событий.",
-    "ex3.t":"Хардкод-секрет в коде","ex3.tag0":"security","ex3.note":"AST-анализ обнаруживает захардкоженные секреты и пароли и выносит их в переменные окружения — они перестают светиться в репозитории и коммитах.",
+    "ex3.t":"Хардкод-секрет в коде","ex3.tag0":"security","ex3.tag1":"hardcode","ex3.note":"AST-анализ обнаруживает захардкоженные секреты и пароли и выносит их в переменные окружения — они перестают светиться в репозитории и коммитах.",
     "ex.before":"До","ex.after":"После","ex.why":"Почему это важно:",
     "how.kick":"Как это работает","how.h":"Пять шагов до современного кода",
     "how.t1":"Парсинг","how.d1":"LibCST обходит AST и собирает карту находок: deprecated импорты, устаревшие конструкции, проблемы безопасности, паттерны N+1.",
@@ -522,7 +522,7 @@ var I18N = {
     "ex.kick":"Concrete examples","ex.h":"What the engine actually changes","ex.sub":"Three typical cases: from a removed API to an insecure practice. Left — what you send in; right — what you get after sandbox verification.",
     "ex1.t":"Python 2 → Python 3.12","ex1.tag":"automated","ex1.note":"urlparse and urllib2 were removed in Python 3 — this code simply would not run without the migration.",
     "ex2.t":"Deprecated datetime.utcnow","ex2.tag":"deprecation","ex2.note":"datetime.utcnow is deprecated — the new version stores the timezone correctly, which matters for audits and event timestamps.",
-    "ex3.t":"Hardcoded secret in code","ex3.tag0":"security","ex3.note":"AST analysis detects hardcoded secrets and passwords and moves them to environment variables — they stop leaking into your repository and commit history.",
+    "ex3.t":"Hardcoded secret in code","ex3.tag0":"security","ex3.tag1":"hardcode","ex3.note":"AST analysis detects hardcoded secrets and passwords and moves them to environment variables — they stop leaking into your repository and commit history.",
     "ex.before":"Before","ex.after":"After","ex.why":"Why it matters:",
     "how.kick":"How it works","how.h":"Five steps to modern code",
     "how.t1":"Parsing","how.d1":"LibCST walks the AST and builds a map of findings: deprecated imports, outdated constructs, security issues, N+1 patterns.",
