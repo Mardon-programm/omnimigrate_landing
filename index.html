@@ -86,6 +86,17 @@
   .flow-line .fl-step:last-child{color:var(--primary-l);border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.06)}
   .flow-line .fl-arrow{color:var(--accent);font-weight:700}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+  /* scroll indicator */
+  .scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted);font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;animation:bounce 2s infinite}
+  .scroll-hint svg{width:20px;height:20px;stroke:var(--muted)}
+  @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+  /* stagger delays */
+  .reveal:nth-child(1){transition-delay:0ms}
+  .reveal:nth-child(2){transition-delay:80ms}
+  .reveal:nth-child(3){transition-delay:160ms}
+  .reveal:nth-child(4){transition-delay:240ms}
+  .reveal:nth-child(5){transition-delay:320ms}
+  .reveal:nth-child(6){transition-delay:400ms}
   /* console */
   .console{position:relative;border:1px solid var(--border2);border-radius:14px;background:var(--surface);overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
   .console::before{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;border:1px solid transparent;background:linear-gradient(135deg,rgba(16,185,129,.14),rgba(6,182,212,.1)) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
@@ -258,6 +269,10 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a class="btn btn--ghost" href="#how" data-i18n="hero.cta2">Как это работает</a>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
       </div>
     </div>
     <div class="console">
@@ -472,7 +487,7 @@ var I18N = {
     "hero.badge":"Enterprise-oriented AI migration platform",
     "hero.t1":"Автономная AI-миграция legacy-кода","hero.t2":"в современный","hero.t3":"— без человека в контуре",
     "hero.lead":"OmniMigrate анализирует ваш legacy-код, планирует миграцию, переписывает его с помощью ИИ, проверяет результат в изолированной среде выполнения и автоматически исправляет ошибки — превращая модернизацию устаревшего кода в автономный конвейер. AI-изменения проверяются до доставки.",
-    "hero.cta1":"Смотреть примеры миграции","hero.cta2":"Как это работает",
+    "hero.cta1":"Смотреть примеры миграции","hero.cta2":"Как это работает","hero.scroll":"Прокрутить",
     "con.s1":"AST-парсинг","con.s2":"Анализ · найдено 12","con.s3":"LLM-рефакторинг","con.s4":"Sandbox · компиляция","con.s5":"Self-healing · 2 раунда","con.s6":"Сборка diff",
     "con.write":"[omnimigrate] legacy.py → python-3.12 · 214 строк · OK",
     "strip.label":"Внутри — enterprise-архитектура",
@@ -508,7 +523,7 @@ var I18N = {
     "hero.badge":"Enterprise-oriented AI migration platform",
     "hero.t1":"Autonomous AI migration of legacy code","hero.t2":"into modern","hero.t3":"— no human in the loop",
     "hero.lead":"OmniMigrate analyzes your legacy code, plans the migration, rewrites it with AI, verifies the result in an isolated execution environment, and automatically repairs failures — turning legacy modernization into an autonomous pipeline. AI-generated changes are verified before delivery.",
-    "hero.cta1":"See migration examples","hero.cta2":"How it works",
+    "hero.cta1":"See migration examples","hero.cta2":"How it works","hero.scroll":"Scroll",
     "con.s1":"AST parsing","con.s2":"Analysis · 12 found","con.s3":"LLM refactoring","con.s4":"Sandbox · compile","con.s5":"Self-healing · 2 rounds","con.s6":"Building diff",
     "con.write":"[omnimigrate] legacy.py → python-3.12 · 214 lines · OK",
     "pro.kick":"Problem","pro.h":"Manual migration is expensive, risky, and doesn't scale","pro.sub":"Millions of projects are stuck on legacy code: unsupported frameworks, removed APIs, outdated constructs. Manual modernization can't keep up with demand.",
@@ -565,10 +580,20 @@ document.querySelectorAll('.lang button').forEach(function(btn){
 });
 
 /* ================= reveal on scroll ================= */
-var io=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target;
+        var parent=el.parentElement;
+        var siblings=parent?Array.from(parent.querySelectorAll('.reveal')):[];
+        var idx=siblings.indexOf(el);
+        if(idx>-1) el.style.transitionDelay=(idx*80)+'ms';
+        el.classList.add('in');
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
 /* ================= init ================= */
 var saved='ru';
