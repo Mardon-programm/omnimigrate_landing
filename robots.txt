@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://omnimigrate.com/sitemap.xml
+Sitemap: https://omnimigrate-landing.vercel.app/sitemap.xml
 
 # Disallow private/admin areas
 Disallow: /api/
