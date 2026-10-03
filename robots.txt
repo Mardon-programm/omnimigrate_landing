@@ -1,0 +1,13 @@
+# OmniMigrate - Autonomous AI Code Migration
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://omnimigrate.com/sitemap.xml
+
+# Disallow private/admin areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*.xml$
