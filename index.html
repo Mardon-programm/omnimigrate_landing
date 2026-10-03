@@ -189,10 +189,13 @@
   /* pricing */
   .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
   @media(max-width:980px){.price-grid{grid-template-columns:1fr}}
-  .price{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:16px;background:var(--surface);padding:34px 30px;position:relative}
+  .price{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:16px;background:var(--surface);padding:34px 30px;position:relative;transition:border-color .3s,box-shadow .3s,transform .3s}
+  .price:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 24px 48px -24px rgba(16,185,129,.18)}
   .price.featured{border-color:var(--primary);box-shadow:0 0 0 1px rgba(16,185,129,.3),0 40px 80px -30px rgba(16,185,129,.2)}
-  .price.featured::before{content:"";position:absolute;inset:-1px;border-radius:17px;background:linear-gradient(135deg,var(--primary),var(--accent));opacity:0;transition:opacity .3s;pointer-events:none}
+  .price.featured:hover{box-shadow:0 0 0 1px rgba(16,185,129,.3),0 48px 96px -32px rgba(16,185,129,.25)}
+  .price.featured::before{content:"";position:absolute;inset:-1px;border-radius:17px;background:linear-gradient(135deg,var(--primary),var(--accent));opacity:0;transition:opacity .3s;pointer-events:none;z-index:-1}
   .price.featured:hover::before{opacity:1}
+  .price > *{position:relative;z-index:1}
   .price .plan{font-family:var(--font-mono);font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim)}
   .price.featured .plan{color:var(--primary-l)}
   .price .amount{font-family:var(--font-head);font-weight:800;font-size:44px;margin:16px 0 4px}
