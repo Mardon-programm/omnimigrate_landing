@@ -265,10 +265,10 @@
         <span class="fl-step">AST Analysis</span><span class="fl-arrow">→</span><span class="fl-step">AI Refactoring</span><span class="fl-arrow">→</span><span class="fl-step">Sandbox Verification</span><span class="fl-arrow">→</span><span class="fl-step">Self-Healing</span><span class="fl-arrow">→</span><span class="fl-step">Verified Diff</span>
       </div>
       <div class="hero-cta">
-        <a class="btn btn--primary" href="#examples"><span data-i18n="hero.cta1">Смотреть примеры миграции</span>
+        <a class="btn btn--primary" href="#pricing"><span data-i18n="hero.cta1">Get Early Access</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a class="btn btn--ghost" href="#how" data-i18n="hero.cta2">Как это работает</a>
+        <a class="btn btn--ghost" href="#how" data-i18n="hero.cta2">How it works</a>
       </div>
       <div class="scroll-hint" aria-hidden="true">
         <span data-i18n="hero.scroll">Scroll</span>
@@ -427,28 +427,28 @@ created = datetime.now(timezone.utc)</span></code></pre>
 <!-- PRICING -->
 <section id="pricing" style="background:linear-gradient(180deg,transparent,rgba(6,182,212,.03) 40%,transparent)">
   <div class="wrap center reveal"><span class="kicker" data-i18n="price.kick">Тарифы</span>
-    <h2 data-i18n="price.h">Начните бесплатно, масштабируйтесь платно</h2>
-    <p class="sub" data-i18n="price.sub">Metered billing: платите за миграции и токены по факту. Подписка + оплата сверх лимита.</p>
+    <h2 data-i18n="price.h">Early Access — Beta Program</h2>
+    <p class="sub" data-i18n="price.sub">Полный доступ к платформе. Цены для ранних пользователей — заморожены навсегда.</p>
   </div>
   <div class="wrap price-grid" style="margin-top:48px">
-    <div class="price reveal"><span class="plan">Free</span><div class="amount">$0</div><div class="per" data-i18n="price.per">/ мес</div>
+    <div class="price reveal"><span class="plan">Starter</span><div class="amount">$19</div><div class="per" data-i18n="price.per">/ мес</div>
       <ul>
-        <li data-i18n="price.f1">Лимит миграций в месяц</li>
-        <li data-i18n="price.f2">AST-анализ</li>
-        <li data-i18n="price.f3">Diff-просмотр</li>
-        <li data-i18n="price.f4">Сообщество-поддержка</li>
+        <li data-i18n="price.f1">AST-анализ + Self-healing</li>
+        <li data-i18n="price.f2">Песочница (компиляция/запуск)</li>
+        <li data-i18n="price.f3">Diff-просмотр перед мержем</li>
+        <li data-i18n="price.f4">50 миграций / мес</li>
       </ul>
-      <button class="btn btn--ghost" disabled data-i18n="price.dev">В разработке</button>
+      <a class="btn btn--ghost" href="#" data-i18n="price.start">Get Early Access</a>
     </div>
-    <div class="price featured reveal"><span class="top-note" data-i18n="price.pop">Популярный</span><span class="plan">Team</span><div class="amount">$49</div><div class="per" data-i18n="price.tper">/ мес + оплата сверх лимита</div>
+    <div class="price featured reveal"><span class="top-note" data-i18n="price.pop">Популярный</span><span class="plan">Pro</span><div class="amount">$79</div><div class="per" data-i18n="price.tper">/ мес</div>
       <ul>
-        <li data-i18n="price.t1">Повышенный лимит миграций</li>
+        <li data-i18n="price.t1">Безлимитные миграции</li>
         <li data-i18n="price.t2">Приоритетные очереди</li>
         <li data-i18n="price.t3">RBAC и организации</li>
         <li data-i18n="price.t4">Метрики использования</li>
         <li data-i18n="price.t5">Приоритетная поддержка</li>
       </ul>
-      <button class="btn btn--primary" disabled data-i18n="price.dev">В разработке</button>
+      <a class="btn btn--primary" href="#" data-i18n="price.cteam">Get Early Access</a>
     </div>
     <div class="price reveal"><span class="plan">Enterprise</span><div class="amount" data-i18n="price.custom">Custom</div><div class="per" data-i18n="price.eper">для корпораций</div>
       <ul>
@@ -458,7 +458,7 @@ created = datetime.now(timezone.utc)</span></code></pre>
         <li data-i18n="price.e4">Kubernetes / Helm-деплой</li>
         <li data-i18n="price.e5">Выделенная поддержка</li>
       </ul>
-      <button class="btn btn--ghost" disabled data-i18n="price.dev">В разработке</button>
+      <a class="btn btn--ghost" href="#" data-i18n="price.contact">Contact Sales</a>
     </div>
   </div>
 </section>
@@ -490,6 +490,11 @@ created = datetime.now(timezone.utc)</span></code></pre>
         <span>mardonfounder@gmail.com</span>
       </a>
     </div>
+    <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px;font-size:13px">
+      <a href="#terms" data-i18n="foot.terms" style="color:var(--text-dim);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--primary-l)'" onmouseout="this.style.color='var(--text-dim)'">Terms of Service</a>
+      <a href="#privacy" data-i18n="foot.privacy" style="color:var(--text-dim);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--primary-l)'" onmouseout="this.style.color='var(--text-dim)'">Privacy Policy</a>
+      <a href="#refund" data-i18n="foot.refund" style="color:var(--text-dim);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--primary-l)'" onmouseout="this.style.color='var(--text-dim)'">Refund Policy</a>
+    </div>
     <span class="foot-note">Autonomous AI code migration · © 2026 OmniMigrate</span>
   </div>
 </footer>
@@ -500,10 +505,10 @@ var I18N = {
   ru: {
     "nav.product":"Продукт","nav.features":"Возможности","nav.examples":"Примеры","nav.how":"Как работает","nav.pricing":"Тарифы","nav.docs":"Документация",
     "nav.start":"Смотреть тарифы",
-    "hero.badge":"Enterprise-oriented AI migration platform",
+    "hero.badge":"Early Access · Beta Program",
     "hero.t1":"Автономная AI-миграция legacy-кода","hero.t2":"в современный","hero.t3":"— без человека в контуре",
     "hero.lead":"OmniMigrate анализирует ваш legacy-код, планирует миграцию, переписывает его с помощью ИИ, проверяет результат в изолированной среде выполнения и автоматически исправляет ошибки — превращая модернизацию устаревшего кода в автономный конвейер. AI-изменения проверяются до доставки.",
-    "hero.cta1":"Смотреть примеры миграции","hero.cta2":"Как это работает","hero.scroll":"Прокрутить",
+    "hero.cta1":"Get Early Access","hero.cta2":"How it works","hero.scroll":"Scroll",
     "con.s1":"AST-парсинг","con.s2":"Анализ · найдено 12","con.s3":"LLM-рефакторинг","con.s4":"Sandbox · компиляция","con.s5":"Self-healing · 2 раунда","con.s6":"Сборка diff",
     "con.write":"[omnimigrate] legacy.py → python-3.12 · 214 строк · OK",
     "strip.label":"Внутри — enterprise-архитектура",
@@ -527,19 +532,19 @@ var I18N = {
     "how.t3":"Рефакторинг","how.d3":"Модель возвращает только код: без пояснений, с сохранением сигнатур функций и внешнего контракта.",
     "how.t4":"Верификация","how.d4":"Песочница компилирует и запускает результат в изолированном процессе. Ошибка — повод для починки, а не для выдачи.",
     "how.t5":"Готово","how.d5":"Формируется unified diff и метрики; статус стримится через Redis в живой UI. Миграция завершена и проверена.",
-    "price.kick":"Тарифы","price.h":"Начните бесплатно, масштабируйтесь платно","price.sub":"Metered billing: платите за миграции и токены по факту. Подписка + оплата сверх лимита.",
-    "price.per":"/ мес","price.f1":"Лимит миграций в месяц","price.f2":"AST-анализ","price.f3":"Diff-просмотр","price.f4":"Сообщество-поддержка","price.dev":"В разработке",
-    "price.pop":"Популярный","price.tper":"/ мес + оплата сверх лимита","price.t1":"Повышенный лимит миграций","price.t2":"Приоритетные очереди","price.t3":"RBAC и организации","price.t4":"Метрики использования","price.t5":"Приоритетная поддержка",
-    "price.custom":"Custom","price.eper":"для корпораций","price.e1":"Volume-тарификация","price.e2":"SLA и audit log","price.e3":"Мульти-тенантность","price.e4":"Kubernetes / Helm-деплой","price.e5":"Выделенная поддержка",
-    "foot.prod":"Продукт","foot.ex":"Примеры","foot.how":"Как работает","foot.price":"Тарифы",
+"price.kick":"Тарифы","price.h":"Early Access — Beta Program","price.sub":"Полный доступ к платформе. Цены для ранних пользователей — заморожены навсегда.",
+    "price.per":"/ мес","price.f1":"AST-анализ + Self-healing","price.f2":"Песочница (компиляция/запуск)","price.f3":"Diff-просмотр перед мержем","price.f4":"50 миграций / мес","price.start":"Get Early Access",
+    "price.pop":"Популярный","price.tper":"/ мес","price.t1":"Безлимитные миграции","price.t2":"Приоритетные очереди","price.t3":"RBAC и организации","price.t4":"Метрики использования","price.t5":"Приоритетная поддержка","price.cteam":"Get Early Access",
+    "price.custom":"Custom","price.eper":"для корпораций","price.e1":"Volume-тарификация","price.e2":"SLA и audit log","price.e3":"Мульти-тенантность","price.e4":"Kubernetes / Helm-деплой","price.e5":"Выделенная поддержка","price.contact":"Contact Sales",
+    "foot.prod":"Продукт","foot.ex":"Примеры","foot.how":"Как работает","foot.price":"Тарифы","foot.terms":"Terms of Service","foot.privacy":"Privacy Policy","foot.refund":"Refund Policy",
   },
   en: {
     "nav.product":"Product","nav.features":"Features","nav.examples":"Examples","nav.how":"How it works","nav.pricing":"Pricing","nav.docs":"Documentation",
     "nav.start":"See pricing",
-    "hero.badge":"Enterprise-oriented AI migration platform",
+    "hero.badge":"Early Access · Beta Program",
     "hero.t1":"Autonomous AI migration of legacy code","hero.t2":"into modern","hero.t3":"— no human in the loop",
     "hero.lead":"OmniMigrate analyzes your legacy code, plans the migration, rewrites it with AI, verifies the result in an isolated execution environment, and automatically repairs failures — turning legacy modernization into an autonomous pipeline. AI-generated changes are verified before delivery.",
-    "hero.cta1":"See migration examples","hero.cta2":"How it works","hero.scroll":"Scroll",
+    "hero.cta1":"Get Early Access","hero.cta2":"How it works","hero.scroll":"Scroll",
     "con.s1":"AST parsing","con.s2":"Analysis · 12 found","con.s3":"LLM refactoring","con.s4":"Sandbox · compile","con.s5":"Self-healing · 2 rounds","con.s6":"Building diff",
     "con.write":"[omnimigrate] legacy.py → python-3.12 · 214 lines · OK",
     "pro.kick":"Problem","pro.h":"Manual migration is expensive, risky, and doesn't scale","pro.sub":"Millions of projects are stuck on legacy code: unsupported frameworks, removed APIs, outdated constructs. Manual modernization can't keep up with demand.",
@@ -562,11 +567,11 @@ var I18N = {
     "how.t3":"Refactoring","how.d3":"The model returns code only: no filler, preserving function signatures and the external contract.",
     "how.t4":"Verification","how.d4":"The sandbox compiles and runs the result in an isolated process. An error is a reason to repair, not to ship.",
     "how.t5":"Done","how.d5":"A unified diff and metrics are produced; status streams through Redis to the live UI. The migration is complete and verified.",
-    "price.kick":"Pricing","price.h":"Start free, scale on a paid plan","price.sub":"Metered billing: pay for migrations and tokens as you use them. Subscription plus overage charges.",
-    "price.per":"/ month","price.f1":"Monthly migration limit","price.f2":"AST analysis","price.f3":"Diff review","price.f4":"Community support","price.dev":"In development",
-    "price.pop":"Popular","price.tper":"/ month + overage","price.t1":"Higher migration limits","price.t2":"Priority queues","price.t3":"RBAC and organizations","price.t4":"Usage metrics","price.t5":"Priority support",
-    "price.custom":"Custom","price.eper":"for enterprises","price.e1":"Volume pricing","price.e2":"SLA and audit log","price.e3":"Multi-tenancy","price.e4":"Kubernetes / Helm deploy","price.e5":"Dedicated support",
-    "foot.prod":"Product","foot.ex":"Examples","foot.how":"How it works","foot.price":"Pricing",
+    "price.kick":"Pricing","price.h":"Early Access — Beta Program","price.sub":"Full platform access. Early adopter pricing — locked forever.",
+    "price.per":"/ month","price.f1":"AST analysis + Self-healing","price.f2":"Sandbox (compile/run)","price.f3":"Diff review before merge","price.f4":"50 migrations / mo","price.start":"Get Early Access",
+    "price.pop":"Popular","price.tper":"/ month","price.t1":"Unlimited migrations","price.t2":"Priority queues","price.t3":"RBAC & organizations","price.t4":"Usage metrics","price.t5":"Priority support","price.cteam":"Get Early Access",
+    "price.custom":"Custom","price.eper":"for enterprises","price.e1":"Volume pricing","price.e2":"SLA & audit log","price.e3":"Multi-tenancy","price.e4":"Kubernetes / Helm deploy","price.e5":"Dedicated support","price.contact":"Contact Sales",
+    "foot.prod":"Product","foot.ex":"Examples","foot.how":"How it works","foot.price":"Pricing","foot.terms":"Terms of Service","foot.privacy":"Privacy Policy","foot.refund":"Refund Policy",
   }
 };
 
